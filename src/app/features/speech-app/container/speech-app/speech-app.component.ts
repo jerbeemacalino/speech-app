@@ -92,7 +92,6 @@ export class SpeechAppComponent implements OnInit {
         this.speechForm.updateValueAndValidity();
 
         this.message = 'Successfully removed speech!';
-
         this.cd.detectChanges();
 
     }
