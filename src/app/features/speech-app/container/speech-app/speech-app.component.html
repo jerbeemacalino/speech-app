@@ -15,8 +15,8 @@
                                 <app-speech-form
                                     [parent]="speechForm"
                                     [selectedSpeech]="selectedSpeechData"
-                                    (deleteSpeech)="deleteSpeech($event)"
-                                    (updateSpeech)="updateSpeech($event)"
+                                    (deleteSpeech)="deleteSpeech()"
+                                    (updateSpeech)="updateSpeech()"
                                     [hideDelete]="false">
                                 </app-speech-form>
                             </div>
@@ -28,7 +28,7 @@
                         <div class="row mt-5">
                             <div class="col-12">
                                 <app-speech-form
-                                    (addSpeech)="addSpeech($event)"
+                                    (addSpeech)="addSpeech()"
                                     [parent]="speechForm"
                                     [hideDelete]="true">
                                 </app-speech-form>
