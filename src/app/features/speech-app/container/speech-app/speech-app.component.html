@@ -15,7 +15,7 @@
                                 <app-speech-form
                                     [parent]="speechForm"
                                     [selectedSpeech]="selectedSpeechData"
-                                    (deleteSpeech)="deleteSpeech()"
+                                    (deleteSpeech)="deleteSpeech($event)"
                                     (updateSpeech)="updateSpeech()"
                                     [hideDelete]="false">
                                 </app-speech-form>
