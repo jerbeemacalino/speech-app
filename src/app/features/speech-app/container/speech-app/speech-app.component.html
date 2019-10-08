@@ -1,11 +1,12 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-12 mt-5">
+        <div class="col-12 mt-5">
+            <h2>Speech App</h2>  
             <tabset>
                 <tab heading="View my Speeches" (selectTab)="submitNewSpeech()">
                     <div class="container">
                         <div class="row mt-5">
-                            <div class="col-md-3">
+                            <div class="col-md-3 mb-3">
                                 <app-view-my-speeches
                                     [speechList]="speechList"
                                     (selectSpeech)="selectedSpeech($event)">
