@@ -1,0 +1,27 @@
+<form [formGroup]="parent">
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <textarea formControlName="content" class="form-control" placeholder="Speech content shown here" rows="10"></textarea>
+            </div>
+        </div>
+        <div class="col-4">
+            <input class="form-control" type="text" formControlName="author" placeholder="Author">
+        </div>
+        <div class="col-4">
+            <input class="form-control" type="text" formControlName="subject" placeholder="Subject area keywords">
+        </div>
+        <div class="col-4">
+            <input type="text"
+                placeholder="Date"
+                formControlName="date"
+                class="form-control"
+                bsDatepicker>
+        </div>
+        <div class="col-12 text-right mt-3">
+            <button [disabled]="!parent.valid" class="btn btn-danger" *ngIf="!hideDelete" (click)="delete()">Delete</button>
+            <button [disabled]="!parent.valid" class="btn btn-primary" *ngIf="!hideDelete" (click)="update()">Update</button>
+            <button [disabled]="!parent.valid" class="btn btn-primary" *ngIf="hideDelete" (click)="save()">Save</button>
+        </div>
+    </div>
+</form>

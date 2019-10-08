@@ -1,0 +1,23 @@
+ul {
+    padding:0;
+    margin: 0;
+    li {
+        padding:0;
+        list-style: none;
+        display: block;
+        width: 100%;
+        cursor: pointer;
+        a {
+            display: block;
+            border-bottom: 0;
+            padding: 5px;
+        }
+        &:last-child {
+            border-bottom: 1px solid #20a8d8;
+        }
+        &.active {
+            background: #20a8d8;
+            color: #fff;
+        }
+    }
+}

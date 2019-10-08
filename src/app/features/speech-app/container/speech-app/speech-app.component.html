@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 mt-5">
+            <tabset>
+                <tab heading="View my Speeches" (selectTab)="submitNewSpeech()">
+                    <div class="container">
+                        <div class="row mt-5">
+                            <div class="col-md-3">
+                                <app-view-my-speeches
+                                    [speechList]="speechList"
+                                    (selectSpeech)="selectedSpeech($event)">
+                                </app-view-my-speeches>
+                            </div>
+                            <div class="col-md-9">
+                                <app-speech-form
+                                    [parent]="speechForm"
+                                    [selectedSpeech]="selectedSpeechData"
+                                    (deleteSpeech)="deleteSpeech($event)"
+                                    (updateSpeech)="updateSpeech($event)"
+                                    [hideDelete]="false">
+                                </app-speech-form>
+                            </div>
+                        </div>
+                    </div>
+                </tab>
+                <tab heading="Submit a new Speech" (selectTab)="submitNewSpeech()">
+                    <div class="container">
+                        <div class="row mt-5">
+                            <div class="col-12">
+                                <app-speech-form
+                                    (addSpeech)="addSpeech($event)"
+                                    [parent]="speechForm"
+                                    [hideDelete]="true">
+                                </app-speech-form>
+                            </div>
+                        </div>
+                    </div>
+                </tab>
+                <tab heading="Search all Speeches" (selectTab)="submitNewSpeech()">
+                    <div class="container">
+                        <div class="row mt-5">
+                            <div class="col-md-8 center">
+                                <app-search-all-speeches
+                                    (submitSearch)="search()"
+                                    [searchResult]="searchResult"
+                                    [parent]="searchForm">
+                                </app-search-all-speeches>
+                            </div>
+                        </div>
+                    </div>
+                </tab>
+            </tabset>
+            <app-message [message]="message"></app-message>
+        </div>
+    </div>
+</div>

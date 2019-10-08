@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let speech of speechList">
+        <a (click)="selectSpeechID(speech.id)">{{speech.subject}}</a>
+    </li>
+</ul>

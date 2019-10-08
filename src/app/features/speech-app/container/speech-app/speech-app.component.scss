@@ -1,0 +1,39 @@
+:host ::ng-deep {
+    .tab-content {
+        padding:0;
+        width: 100%;
+    }
+    .tab-container {
+        // background: red;
+        ul {
+            padding-bottom: 1px;
+            li {
+                padding: 0;
+                width: 33.3%;
+                a {
+                    border:1px solid #20a8d8;
+                    margin:0;
+                    background: #fff;
+                    border-radius: 0;
+                }
+                &.active {
+                    a {
+                        background:#20a8d8;
+                        color: #fff;
+                    }
+                }
+                &:hover{
+                    a {
+                        background: #20a8d8;
+                        color: #fff;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.center {
+    margin:auto;
+}

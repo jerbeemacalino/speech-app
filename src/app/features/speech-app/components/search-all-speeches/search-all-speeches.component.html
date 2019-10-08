@@ -1,0 +1,23 @@
+<form [formGroup]="parent" (submit)="search()">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-8 nopadding">
+                <input class="form-control mt-2" type="text" formControlName="search" placeholder="Search Speech">
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-primary mt-2">Search</button>
+            </div>
+            <div class="col-md-12 nopadding mt-5">
+                <p class="mb-4">Result:</p>
+                <ul>
+                    <li *ngFor="let search of searchResult">
+                        <p><span><strong>ID:</strong></span> {{search.id}}</p>
+                        <p><span><strong>Subject</strong></span>{{search.subject}}</p>
+                        <p><span><strong>Author</strong></span>{{search.author}}</p>
+                        <p><span><strong>Date</strong></span>{{search.date}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</form>
